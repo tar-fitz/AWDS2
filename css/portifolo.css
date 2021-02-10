@@ -1,5 +1,11 @@
 :root {
     /*Put variables here*/
+    --main-color: #06d6a0;
+    --accent-1: #073b4c;
+    --accent-2: #ef476f;
+    --accent-3: #118ab2;
+    --accent-4: #ffd166;
+
 }
 * {
     margin: 0;
@@ -8,14 +14,14 @@
     font-family: 'Potta One', cursive;
 }
 body {
-    background: lightgray;
+    background: var(--main-color);
 }
 header {
     padding: 2rem;
     text-align: center;
 }
 nav {
-    background: black;
+    background: var(--accent-1);
     color: white;
 }
 nav ul {
@@ -37,13 +43,13 @@ nav li a:hover {
     background-color:  rgba(211, 211, 211, .4);
 }
 footer {
-    background: black;
+    background: var(--accent-1);
     color: white;
     padding: 3rem;
     min-height: 10vh;
 }
 .container {
-    background: burlywood;
+    background: var(--accent-2);
     padding: 1rem;
     min-height: 60vh;
     width: 80%;
@@ -127,7 +133,7 @@ footer {
     padding: 2vh 0;
 }
 .row-button {
-    background: darkred;
+    background: rgb(15, 190, 138);
     color: white;
     display: block;
     padding: 1.25rem;
@@ -140,8 +146,8 @@ footer {
     transition: background-color .5s ease;
 }
 .row-button:hover {
-    background-color: rgba(139,0,0,0.5);
-    color: darkred;
+    background-color:rgb(78, 150, 233);
+    color: rgb(83, 137, 236);
     box-shadow: 3px 11px 10px -1px rgba(100, 100, 100, 0.69); 
 }
 /* contact me page css*/
@@ -168,7 +174,7 @@ footer {
     font-size: 2rem;
 }
 .contact-item:hover {
-    background-color: lightpink;
+    background-color: var(--accent-4);
 }
 .contact-item a:hover::before {
     content: "-->";
@@ -176,8 +182,8 @@ footer {
 
 @media only screen and (max-width:800px) {
 .container {
-    background: darkred;
-    color: white;
+    background: gray;
+    color: black;
     width: 100%;
 }
 .section-container {
@@ -186,5 +192,17 @@ footer {
     }
     .section-item {
         flex-basis: 92%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .section-header {
+        text-align: center;
+    }
+    .row-button {
+        max-width: 60vw;
+    }
+    .contact {
+        align-items: center;
     }
 }
