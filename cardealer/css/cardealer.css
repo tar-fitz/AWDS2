@@ -9,7 +9,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-}
+    font-family: 'Permanent Marker', cursive;}
 body {
     background: lightgrey;
 }
@@ -303,5 +303,68 @@ footer {
         background: darkred;
         color: white;
         width: 100%;
+    }
+    /* General CSS*/
+    header,footer {
+        text-align: center;
+    }
+    nav li a {
+        display: block;
+    }
+    /* Index Page */
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .row-dark {
+        flex-direction: column-reverse;
+        padding: 2vh;
+    }
+    /* Vehicles page */
+    .car-container {
+        flex-direction: column;
+    }
+    .car-item {
+        width: 100%;
+        text-align: center;
+    }
+    .car-image img {
+        width: 100%;
+    }
+    .car-section-header {
+        text-align: center;
+    }
+    /* Deals page */
+    .deals-container {
+        flex-flow: column wrap;
+    }
+    .deals-item:hover .deals-overlay {
+        width: 100%;
+    }
+    .deals-overlay .cta-button {
+        width: 60%;
+        padding: 2vh;
+        font-size: 1.25rem;
+    }
+    /* Team page */
+    .team-container {
+        flex-flow: column wrap;
+    }
+    .grid-item {
+        text-align: center;
+        flex: 0 0 100%;
+        grid-template-rows: auto 45vh auto auto;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "name"
+            "pic"
+            "title"
+            "bio";
+    }
+    .grid-image {
+        padding: 2vh;
+    }
+    .grid-image img {
+        height: 100%;
     }
 }
