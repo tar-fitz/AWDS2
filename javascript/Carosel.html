@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+	<!-- CSS Will go under Here in STYLE Tags -->
+	<style>
+        
+		:root {
+			/* Put Variables Here */
+
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background: white;
+		}
+		header {
+			padding: 1vh;
+			text-align: center;
+		}
+		nav {
+			background-color: black;
+			color: white;
+		}
+		footer {
+			background-color: black;
+			color: white;
+			padding: 2vh;
+			min-height: 10vh;
+		}
+		.container {
+			background-color: beige;
+			padding: 1vh;
+			min-height: 60vh;
+			width: 80%;
+			margin: auto;
+		}
+        .carousel {
+            width: 80%;
+            margin: auto;
+            background-color: lightgrey;
+        }
+        .carousel-image {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+        .carousel-image img {
+            display: block;
+            width: 100%;
+        }
+        .carousel-overlay {
+            position: absolute;
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(0,0,0, 0.4);
+            left: 0;
+            bottom: 0;
+            color: white;
+            text-align: center;
+        }
+        .carousel-buttons {
+            height: 7vh;
+            background: rgba(87, 87, 87, .6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+        }
+        .carousel-buttons > * {
+            font-size: 4vh;
+            text-align: center;
+        }
+
+		@media only screen and (max-width:800px) {
+			.container {
+				width: 100%;
+				margin: auto;
+			}
+		}
+
+
+
+
+	</style>
+	<!-- Put the Link Tags Here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+
+	<title>My Page Title</title>
+
+</head>
+<body>
+	<header>
+		header
+	</header>
+	<nav>
+		Placeholder
+	</nav>
+	<div class="container">
+		<!-- Put assignment specific code here -->
+		<div class="carousel">
+
+            <div class="carousel-image">
+
+                <img id="theImage" src="#" alt="#" title="" data-showing="0">
+                <div class="carousel-overlay">
+                    <h3 id="carousel-title">Title</h3>
+                    <p id="carousel-text">
+                        Text
+                    </p>
+                </div><!-- end overlay -->
+
+            </div><!-- end carousel image -->
+            <div class="carousel-buttons">
+                <i class="fas fa-arrow-circle-left" onclick="previousImage()"></i>
+                <i class="fas fa-arrow-circle-right" onclick="nextImage()"></i>
+            </div><!-- end of carousel buttons -->
+
+        </div><!-- end carousel -->
+		
+		
+		
+		
+		
+		
+	</div><!-- End of the container -->
+	<footer>
+		Made in FHS Web Design
+	</footer>
+	<script>
+
+		changeImage(0);
+
+		function changeImage(num) {
+			const images = [
+				"https://cdn.britannica.com/15/189715-050-4310222B/Dubai-United-Arab-Emirates-Burj-Khalifa-top.jpg",
+				"https://d3500i1ecak5li.cloudfront.net/s3fs-public/styles/banner/public/images/chapters/Los-Angeles-Travel-Massive.jpg",
+				"https://cdn.getyourguide.com/img/country/58de1486a0b8d.jpeg/88.jpg",
+				"https://img.theculturetrip.com/x/smart/wp-content/uploads/2019/04/gettyimages-829204664.jpg"
+			];
+			const titles = [
+				"Dubai",
+				"Los Angeles",
+				"Japan",
+				"China"
+			];
+			const text = [
+				"Want to goto Dubai",
+				"want to vist the busy city",
+				"Vist cool places",
+				"Vist tall buildings"
+			];
+
+			const carousel = document.getElementById("theImage");
+			const carouselTitle = document.getElementById("carousel-title");
+			const carouselText = document.getElementById("carousel-text"); 
+
+
+			if(num > (images.length-1)) {
+				num = 0;
+
+			}
+			if(num < 0) {
+				num = images.length -1;
+			}
+
+
+
+
+			carousel.src = images[num];
+			carouselText.innerHTML = text[num];
+			carouselTitle.innerHTML = titles[num];
+			carousel.setAttribute("data-showing", num);
+
+		} // end of changeImage function
+
+		function nextImage() {
+			let num = parseInt(document.getElementById("theImage").getAttribute("data-showing"));
+			num = num + 1;
+			changeImage(num);
+		}
+
+		function previousImage() {
+			let num = parseInt(document.getElementById("theImage").getAttribute("data-showing"));
+			num = num - 1;
+			changeImage(num);
+		}
+
+
+
+
+	</script>
+
+
+
+
+<!-- Don't delete me please, but copy me...-->
+</body>
+</html>
