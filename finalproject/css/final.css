@@ -1,5 +1,16 @@
 :root {
     /* Put Variables Here */
+    --main-color: #8ecae6;
+    --accent-1: #219ebc;
+    --accent-2: #023047;
+    --accent-3: #ffb703;
+    --accent-4: #fb8500;
+    --accent-5:#ef476f;
+    --accent-6:#f07167;
+    --accent-7:#656d4a;
+    --accent-8:#2b9348;
+    --accent-9:#c44536;
+    --accent-10:#d9ae94;
 
 }
 * {
@@ -8,14 +19,15 @@
     box-sizing: border-box;
 }
 body {
-    background: white;
+    background: var(--main-color);
 }
 header {
     padding: 2rem;
     text-align: center;
+    background-color: var(--accent-1);
 }
 nav {
-    background-color: black;
+    background-color: var(--accent-3);
     color: white;
 }
 footer {
@@ -25,7 +37,7 @@ footer {
     min-height: 10vh;
 }
 .container {
-    background-color: beige;
+    background-color: var(--accent-10);
     padding: 1vh;
     min-height: 60vh;
     width: 80%;
@@ -40,7 +52,7 @@ footer {
     border-radius: 50%; 
   }
   nav {
-    background: lightgreen;
+    background: var(--accent-2);
     color: white;
 }
 nav ul {
@@ -58,14 +70,14 @@ nav li a {
     transition: padding .5s ease;
 }
 nav li a:hover {
-    background-color: lemonchiffon;
+    background-color: rgb(212, 13, 39);
     color: black;
     padding: 2.5vh 4vw;
 }
 .cover-photo {
     height: 80vh;
     margin: auto;
-    background-color: lightgray;
+    background-color: var(--accent-4);
     /* Image is 3200 x 1800 */
     background-image: url(../image/messi.jpg);
     background-position: center;
@@ -100,7 +112,7 @@ nav li a:hover {
     padding: 1.5rem;
     border-radius: 1rem;
     color: white;
-    background: darkred;
+    background: var(--accent-5);
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
@@ -116,9 +128,10 @@ nav li a:hover {
     flex-direction: row;
     min-height: 30vh;
     margin: 2vh 0;
+    background-color: var(--accent-7);
 }
 .row-dark {
-    background-color: var(--accent-4);
+    background-color: var(--accent-8);
 }
 .row .media {
     flex-basis: 40%;
@@ -139,7 +152,130 @@ nav li a:hover {
     line-height: 1.75rem;
     padding: 2vh;
 }
-
+/* jersey Page CSS */
+.contact-row {
+    width: 80%;
+    max-width: 1100px;
+    margin: 3vh auto;
+    background-color: var(--accent-6);
+}
+.contact-row .cta-button {
+    font-size: 1rem;
+    padding: 1rem;
+    max-width: 50%;
+}
+/* Jersey Page CSS */
+.car-section-header {
+    font-size: 2rem;
+    padding: 2vh;
+    border-bottom: 1px solid black;
+}
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 2vh auto;
+}
+.car-item {
+    width: 30%;
+    margin: 1rem;
+    background: var(--accent-7);
+    overflow: hidden;
+    border-radius: 12px;
+}
+.car-image {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+}
+.car-image img {
+    display: block;
+    height: 100%;
+}
+.car-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .6);
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car-item:hover .car-overlay {
+    height: 100%;
+}
+.car-overlay p {
+    width: 90%;
+}
+.car-overlay .cta-button {
+    font-size: .75rem;
+    padding: .5rem;
+    width: 70%;
+}
+.car-text h4 {
+    font-size: 1.75rem;
+    padding: .5rem;
+}
+.car-text p {
+    font-size: 1.25rem;
+    padding: .5rem;
+    line-height: 1.75rem;
+}
+/* Team Page CSS */
+.team-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3vh 3vh;
+    width: 80%;
+    margin: auto;
+    background-color: var(--accent-10);
+}
+.grid-item {
+    flex: 0 0 45%;
+    padding: 2vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "pic name"
+    "pic title"
+    "pic bio";
+}
+.grid-image {
+    grid-area: pic;
+}
+.grid-image img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.grid-item h3 {
+    grid-area: name;
+    padding: 1vh;
+    font-size: 1.5rem;
+}
+.grid-item h4 {
+    grid-area: title;
+    padding: 1vh;
+    font-weight: normal;
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+}
+.grid-item p {
+    grid-area: bio;
+    padding: 1vh;
+}
 
 
 
@@ -154,6 +290,13 @@ nav li a:hover {
         width: 100%;
         margin: auto;
     }
+    /* General CSS*/
+    header,footer {
+        text-align: center;
+    }
+    nav li a {
+        display: block;
+    }
     /* Index Page */
     .row {
         flex-direction: column;
@@ -162,6 +305,41 @@ nav li a:hover {
     .row-dark {
         flex-direction: column-reverse;
         padding: 2vh;
+    }
+      /* Jersey page */
+      .car-container {
+        flex-direction: column;
+    }
+    .car-item {
+        width: 100%;
+        text-align: center;
+    }
+    .car-image img {
+        width: 100%;
+    }
+    .car-section-header {
+        text-align: center;
+    }
+    /* Team page */
+    .team-container {
+        flex-flow: column wrap;
+    }
+    .grid-item {
+        text-align: center;
+        flex: 0 0 100%;
+        grid-template-rows: auto 45vh auto auto;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "name"
+            "pic"
+            "title"
+            "bio";
+    }
+    .grid-image {
+        padding: 2vh;
+    }
+    .grid-image img {
+        height: 100%;
     }
    
 }
