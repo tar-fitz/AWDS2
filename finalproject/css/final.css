@@ -1,17 +1,13 @@
 :root {
     /* Put Variables Here */
-    --main-color: #8ecae6;
-    --accent-1: #219ebc;
-    --accent-2: #023047;
-    --accent-3: #ffb703;
-    --accent-4: #fb8500;
-    --accent-5:#ef476f;
-    --accent-6:#f07167;
-    --accent-7:#656d4a;
-    --accent-8:#2b9348;
-    --accent-9:#c44536;
-    --accent-10:#d9ae94;
-
+    --main-color: #005F73;
+    --accent-1: #0A9396;
+    --accent-2: #E9D8A6;
+    --accent-3: #EE9B00;
+    --accent-4: #CA6702;
+    --accent-5:#BB3E03;
+    --accent-6:#AE2012;
+    --accent-7:#9B2226;
 }
 * {
     margin: 0;
@@ -19,16 +15,16 @@
     box-sizing: border-box;
 }
 body {
-    background: var(--main-color);
+    background: var(--accent-2);
 }
 header {
     padding: 2rem;
     text-align: center;
-    background-color: var(--accent-1);
+    background-color: var(--main-color);
 }
 nav {
-    background-color: var(--accent-3);
-    color: white;
+    background-color: var(--accent-1);
+    color: black;
 }
 footer {
     background-color: black;
@@ -37,7 +33,7 @@ footer {
     min-height: 10vh;
 }
 .container {
-    background-color: var(--accent-10);
+    background-color: var(--accent-3);
     padding: 1vh;
     min-height: 60vh;
     width: 80%;
@@ -52,7 +48,7 @@ footer {
     border-radius: 50%; 
   }
   nav {
-    background: var(--accent-2);
+    background: var(--accent-4);
     color: white;
 }
 nav ul {
@@ -70,16 +66,16 @@ nav li a {
     transition: padding .5s ease;
 }
 nav li a:hover {
-    background-color: rgb(212, 13, 39);
+    background-color: lightgreen;
     color: black;
     padding: 2.5vh 4vw;
 }
 .cover-photo {
     height: 80vh;
     margin: auto;
-    background-color: var(--accent-4);
+    background-color: var(--accent-1);
     /* Image is 3200 x 1800 */
-    background-image: url(../image/messi.jpg);
+    background-image: url(../image/Neon\ Pink\ and\ Purple\ Shapes\ Modern\ Tech\ Corporate\ X-Frame\ Banner.jpg);
     background-position: center;
     background-size: cover;
     animation-name: grow;
@@ -112,14 +108,14 @@ nav li a:hover {
     padding: 1.5rem;
     border-radius: 1rem;
     color: white;
-    background: var(--accent-5);
+    background: var(--accent-1);
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
     transition: background-color .5s ease;
 }
 .cta-button:hover {
-    background-color: #577590;
+    background-color: lightgreen;
 }
 .row {
     width: 100%;
@@ -131,7 +127,7 @@ nav li a:hover {
     background-color: var(--accent-7);
 }
 .row-dark {
-    background-color: var(--accent-8);
+    background-color: var(--accent-3);
 }
 .row .media {
     flex-basis: 40%;
@@ -157,7 +153,7 @@ nav li a:hover {
     width: 80%;
     max-width: 1100px;
     margin: 3vh auto;
-    background-color: var(--accent-6);
+    background-color: var(--accent-1);
 }
 .contact-row .cta-button {
     font-size: 1rem;
@@ -239,7 +235,7 @@ nav li a:hover {
     gap: 3vh 3vh;
     width: 80%;
     margin: auto;
-    background-color: var(--accent-10);
+    background-color: var(--accent-5);
 }
 .grid-item {
     flex: 0 0 45%;
