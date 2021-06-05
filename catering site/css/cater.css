@@ -1,0 +1,40 @@
+:root {
+    /* Put Variables Here */
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: white;
+}
+header {
+    padding: 1vh;
+    text-align: center;
+}
+nav {
+    background-color: black;
+    color: white;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 2vh;
+    min-height: 10vh;
+}
+.container {
+    background-color: beige;
+    padding: 1vh;
+    min-height: 60vh;
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width:800px) {
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+}
